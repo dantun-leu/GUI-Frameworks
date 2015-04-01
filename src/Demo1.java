@@ -91,6 +91,3 @@ public class Demo1 {
 		new Demo1();
 	}
 }
-/*
- * 
-*/
