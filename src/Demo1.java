@@ -2,18 +2,18 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Demo1 {
-	JFrame frame;
-	JPanel buttonPanel;
-	JPanel textPanel;
-	JPanel progressPanel;
-	ButtonGroup buttonGroup;
-	JRadioButton[] radioButtons;
-	JCheckBox checkBox;
-	JButton button;
-	JTextField textField;
-	JPasswordField passwordField;
-	JProgressBar progressBar;
-	JLabel label;
+	private JFrame frame;
+	private JPanel buttonPanel;
+	private JPanel textPanel;
+	private JPanel progressPanel;
+	private ButtonGroup buttonGroup;
+	private JRadioButton[] radioButtons;
+	private JCheckBox checkBox;
+	private JButton button;
+	private JTextField textField;
+	private JPasswordField passwordField;
+	private JProgressBar progressBar;
+	private JLabel label;
 
 	public Demo1() {
 		frame = new JFrame("Demo1");

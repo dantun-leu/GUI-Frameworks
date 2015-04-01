@@ -1,15 +1,13 @@
 import javax.swing.*;
 
-public class Demo2 {
+public class Demo3 {
 	private JFrame frame;
+	private JButton button;
 	
-	public Demo2() {
+	public Demo3() {
 		frame = new JFrame("Demo2");
+		
 		frame.setSize(400, 300);
 		frame.setVisible(true);
-	}
-	
-	public static void main(String[] args) {
-		new Demo2();
 	}
 }
