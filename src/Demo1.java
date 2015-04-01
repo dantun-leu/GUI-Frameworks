@@ -23,16 +23,20 @@ public class Demo1 {
 		textPanel = new JPanel();
 		progressPanel = new JPanel();
 		buttonGroup = new ButtonGroup();
+		
 		radioButtons = new JRadioButton[3];
 		for (int i = 0; i < radioButtons.length; i++) {
 			radioButtons[i] = new JRadioButton("JRadioButton " + (i + 1));
 			buttonGroup.add(radioButtons[i]);
 			buttonPanel.add(radioButtons[i]);
 		}
+		
 		panel.add(buttonPanel);
 		checkBox = new JCheckBox("JCheckBox");
+		
 		panel.add(checkBox);
 		button = new JButton("JButton");
+		
 		panel.add(button);
 		textField = new JTextField("JTextField", 10);
 		textField.setPreferredSize(textField.getPreferredSize());
@@ -41,9 +45,11 @@ public class Demo1 {
 		passwordField.setPreferredSize(passwordField.getPreferredSize());
 		textPanel.add(passwordField);
 		panel.add(textPanel);
+		
 		progressBar = new JProgressBar();
 		progressPanel.add(progressBar);
 		panel.add(progressPanel);
+		
 		label = new JLabel("<html><ol>" 
 				+ "<li>Radio Buttons</li>"
 				+ "<li>Check Box</li>"
@@ -59,7 +65,12 @@ public class Demo1 {
 		frame.setResizable(false);
 		frame.setVisible(true);
 
-		new Thread(() -> this.animateProgressBar()).run();
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				animateProgressBar();
+			}
+		}).run();
 	}
 
 	public void animateProgressBar() {
@@ -80,3 +91,6 @@ public class Demo1 {
 		new Demo1();
 	}
 }
+/*
+ * 
+*/
