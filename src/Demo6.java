@@ -76,7 +76,7 @@ public class Demo6 {
 				+ "<li>Text and Password Fields</li>"
 				+ "<li>Progress Bar</li>"
 				+ "<li>Label</li>" 
-				+ "</ol></html>");
+				+ "</ol>Z</html>");
 		// @formatter:on
 		jFrame.add(jLabel);
 		
@@ -162,16 +162,9 @@ public class Demo6 {
 		progressPanel.add(progressBar);
 		frame.add(progressPanel);
 		// @formatter:off
-		jLabel = new JLabel("<html><ol>"
-				+ "<li>Radio Buttons</li>"
-				+ "<li>Check Box</li>"
-				+ "<li>Button</li>"
-				+ "<li>Text and Password Fields</li>"
-				+ "<li>Progress Bar</li>"
-				+ "<li>Label</li>" 
-				+ "</ol></html>");
+		label = new Label("AWT has no line breaks.");
 		// @formatter:on
-		frame.add(jLabel);
+		frame.add(label);
 		
 		frame.setSize(500, 300);
 		frame.setResizable(false);

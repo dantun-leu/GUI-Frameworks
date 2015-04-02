@@ -65,6 +65,25 @@ public class Demo1 {
 		frame.setSize(500, 300);
 		frame.setResizable(false);
 		frame.setVisible(true);
+		frame.addWindowListener(new WindowListener() {
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+				frame.dispose();
+				System.exit(0);
+			}
+			@Override
+			public void windowActivated(WindowEvent arg0) {}
+			@Override
+			public void windowClosed(WindowEvent arg0) {}
+			@Override
+			public void windowDeactivated(WindowEvent e) {}
+			@Override
+			public void windowDeiconified(WindowEvent e) {}
+			@Override
+			public void windowIconified(WindowEvent e) {}
+			@Override
+			public void windowOpened(WindowEvent e) {}
+		});
 		
 		new Thread(new Runnable() {
 			@Override
