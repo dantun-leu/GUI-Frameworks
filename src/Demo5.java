@@ -37,7 +37,7 @@ public class Demo5 {
 		checkBox = new JCheckBox("JCheckBox");
 		
 		frame.add(checkBox);
-		button = new JButton("JButton");
+		button = new JButton("Toggle Look and Feel");
 		
 		frame.add(button);
 		textField = new JTextField("JTextField", 10);
