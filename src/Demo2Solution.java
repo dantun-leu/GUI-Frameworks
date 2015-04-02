@@ -5,6 +5,7 @@ public class Demo2Solution {
 	
 	public Demo2Solution() {
 		frame = new JFrame("Demo2");
+		
 		frame.setSize(400, 300);
 		frame.setVisible(true);
 	}

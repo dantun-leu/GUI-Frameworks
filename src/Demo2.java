@@ -5,8 +5,8 @@ public class Demo2 {
 	
 	public Demo2() {
 		frame = new JFrame("Demo2");
-		frame.setSize(400, 300);
-		frame.setVisible(true);
+		
+		//Challenge: Make a JFrame of size 400x300 appear.
 	}
 	
 	public static void main(String[] args) {
