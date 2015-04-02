@@ -17,7 +17,7 @@ public class Demo5 {
 	private JProgressBar progressBar;
 	private JLabel label;
 	private boolean isSystemLookAndFeel = false;
-
+	
 	public Demo5() {
 		frame = new JFrame("Demo5");
 		frame.setLayout(new GridLayout(2, 6, 10, 10));
@@ -25,20 +25,20 @@ public class Demo5 {
 		textPanel = new JPanel();
 		progressPanel = new JPanel();
 		buttonGroup = new ButtonGroup();
-
+		
 		radioButtons = new JRadioButton[3];
 		for (int i = 0; i < radioButtons.length; i++) {
 			radioButtons[i] = new JRadioButton("JRadioButton " + (i + 1));
 			buttonGroup.add(radioButtons[i]);
 			buttonPanel.add(radioButtons[i]);
 		}
-
+		
 		frame.add(buttonPanel);
 		checkBox = new JCheckBox("JCheckBox");
-
+		
 		frame.add(checkBox);
 		button = new JButton("JButton");
-
+		
 		frame.add(button);
 		textField = new JTextField("JTextField", 10);
 		textField.setPreferredSize(textField.getPreferredSize());
@@ -47,21 +47,23 @@ public class Demo5 {
 		passwordField.setPreferredSize(passwordField.getPreferredSize());
 		textPanel.add(passwordField);
 		frame.add(textPanel);
-
+		
 		progressBar = new JProgressBar();
 		progressPanel.add(progressBar);
 		frame.add(progressPanel);
-
+		
+		// @formatter:off
 		label = new JLabel("<html><ol>"
 				+ "<li>Radio Buttons</li>"
 				+ "<li>Check Box</li>"
 				+ "<li>Button</li>"
 				+ "<li>Text and Password Fields</li>"
 				+ "<li>Progress Bar</li>"
-				+ "<li>Label</li>" 
+				+ "<li>Label</li>"
 				+ "</ol></html>");
+		// @formatter:on
 		frame.add(label);
-
+		
 		frame.setSize(500, 300);
 		frame.setResizable(false);
 		frame.setVisible(true);
@@ -87,7 +89,11 @@ public class Demo5 {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					UIManager.setLookAndFeel(isSystemLookAndFeel ? UIManager.getCrossPlatformLookAndFeelClassName() : UIManager.getSystemLookAndFeelClassName());
+					//@formatter:off
+					UIManager.setLookAndFeel(isSystemLookAndFeel ?
+							UIManager.getCrossPlatformLookAndFeelClassName() :
+							UIManager.getSystemLookAndFeelClassName());
+					//@formatter:on
 					isSystemLookAndFeel = !isSystemLookAndFeel;
 				} catch (Exception f) {
 					f.printStackTrace();
@@ -96,7 +102,7 @@ public class Demo5 {
 			}
 		});
 	}
-
+	
 	public static void main(String[] args) {
 		new Demo5();
 	}

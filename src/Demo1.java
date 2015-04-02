@@ -16,7 +16,7 @@ public class Demo1 {
 	private JPasswordField passwordField;
 	private JProgressBar progressBar;
 	private JLabel label;
-
+	
 	public Demo1() {
 		frame = new JFrame("Demo1");
 		frame.setLayout(new GridLayout(2, 6, 10, 10));
@@ -24,20 +24,20 @@ public class Demo1 {
 		textPanel = new JPanel();
 		progressPanel = new JPanel();
 		buttonGroup = new ButtonGroup();
-
+		
 		radioButtons = new JRadioButton[3];
 		for (int i = 0; i < radioButtons.length; i++) {
 			radioButtons[i] = new JRadioButton("JRadioButton " + (i + 1));
 			buttonGroup.add(radioButtons[i]);
 			buttonPanel.add(radioButtons[i]);
 		}
-
+		
 		frame.add(buttonPanel);
 		checkBox = new JCheckBox("JCheckBox");
-
+		
 		frame.add(checkBox);
 		button = new JButton("JButton");
-
+		
 		frame.add(button);
 		textField = new JTextField("JTextField", 10);
 		textField.setPreferredSize(textField.getPreferredSize());
@@ -46,11 +46,11 @@ public class Demo1 {
 		passwordField.setPreferredSize(passwordField.getPreferredSize());
 		textPanel.add(passwordField);
 		frame.add(textPanel);
-
+		
 		progressBar = new JProgressBar();
 		progressPanel.add(progressBar);
 		frame.add(progressPanel);
-
+		// @formatter:off
 		label = new JLabel("<html><ol>"
 				+ "<li>Radio Buttons</li>"
 				+ "<li>Check Box</li>"
@@ -59,8 +59,9 @@ public class Demo1 {
 				+ "<li>Progress Bar</li>"
 				+ "<li>Label</li>" 
 				+ "</ol></html>");
+		// @formatter:on
 		frame.add(label);
-
+		
 		frame.setSize(500, 300);
 		frame.setResizable(false);
 		frame.setVisible(true);
@@ -89,7 +90,7 @@ public class Demo1 {
 			}
 		});
 	}
-
+	
 	public static void main(String[] args) {
 		new Demo1();
 	}
