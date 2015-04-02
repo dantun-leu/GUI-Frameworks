@@ -1,5 +1,7 @@
 import javax.swing.*;
+
 import java.awt.*;
+import java.awt.event.*;
 
 public class Demo1 {
 	private JFrame frame;
@@ -62,27 +64,30 @@ public class Demo1 {
 		frame.setSize(500, 300);
 		frame.setResizable(false);
 		frame.setVisible(true);
-
+		
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				animateProgressBar();
+				while (true) {
+					if (progressBar.getValue() >= progressBar.getMaximum()) {
+						progressBar.setValue(0);
+					} else {
+						progressBar.setValue(progressBar.getValue() + 1);
+					}
+					try {
+						Thread.sleep(50);
+					} catch (InterruptedException e) {
+					}
+				}
 			}
-		}).run();
-	}
-
-	public void animateProgressBar() {
-		while (true) {
-			if (progressBar.getValue() >= progressBar.getMaximum()) {
+		}).start();
+		
+		button.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
 				progressBar.setValue(0);
-			} else {
-				progressBar.setValue(progressBar.getValue() + 1);
 			}
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e) {
-			}
-		}
+		});
 	}
 
 	public static void main(String[] args) {
