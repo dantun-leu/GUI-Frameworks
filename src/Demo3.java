@@ -15,7 +15,7 @@ public class Demo3 {
 		frame.add(myButton);
 		
 		/*
-		 * Challenge: Display youButton and make it say "Your Button".
+		 * Challenge: Display yourButton and make it say "Your Button".
 		 */
 		
 		frame.setSize(400, 300);
